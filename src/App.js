@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import image from "./download.jpg"
 
 function App() {
+
+  const Card = styled.div`
+    background-color:gray;
+    width:500px;
+  `
+  const Top = styled.div`
+    display: flex;
+    text-align: center;
+    background-color: lightgray;
+    justify-content:space-between;
+    div{
+      width:100%;
+    }
+  `
+  const Bottom = styled.div`
+  padding: 20px 0;
+    margin-left:5%;
+  `
+
+  const Title1 = styled.h1`
+  width:100%;
+  font-size:2rem;
+  `
+
+  const Title2 = styled.h2`
+  width:100%;
+  font-size: 1rem;
+  font-weight:normal;
+  `
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card>
+        <Top>
+          <img src={image} alt="image triangles" />
+          <div>
+            <Title1>Titre</Title1>
+            <Title2>Sous titre</Title2>
+          </div>
+        </Top>
+        <Bottom>
+          Rate this image
+        </Bottom>
+      </Card>
     </div>
   );
 }
